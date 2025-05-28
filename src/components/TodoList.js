@@ -4,10 +4,10 @@ const TodoList = ({ todos, handleComplete }) => {
 
     return (
         <ul>
-            {todos.map((todo) =>(
+            {todos.map(todo =>(
                 <li key={todo.id}>
-                    {todo.text} {todo.completed ? true : ''}
-                    {!todo.completed && (
+                    {todo.text} {todo.complete ? true : ''}
+                    {!todo.complete && (
                         <button onClick={() => handleComplete(todo.id)}>
                             Complete
                         </button>
@@ -15,7 +15,7 @@ const TodoList = ({ todos, handleComplete }) => {
                 </li>
             ))}
         </ul>
-    )
-}
+    );
+};
 
 export default TodoList;
