@@ -6,7 +6,9 @@ const TodoList = ({ todos, handleComplete }) => {
         <ul>
             {todos.map(todo =>(
                 <li key={todo.id}>
-                    {todo.text} {todo.complete ? true : ''}
+                    <span style={{ textDecoration: todo.complete ? "line-through" : "none" }}></span>
+                        {todo.text}
+                    <span/>
                     {!todo.complete && (
                         <button onClick={() => handleComplete(todo.id)}>
                             Complete
