@@ -20,7 +20,6 @@ const App = () => {
   return (
     <div>
       <h1>Parent Component</h1>
-      <h2>Child Component</h2>
       <TodoList todos={todos} handleComplete={handleComplete}/>
     </div>
   );
